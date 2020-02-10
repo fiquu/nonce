@@ -2,7 +2,7 @@
   "name": "@fiquu/nonce",
   "version": "1.0.0",
   "description": "Simple CSP nonce generator.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "nyc mocha -r ts-node/register test/**/*.spec.ts",
     "postversion": "git push --follow-tags",
