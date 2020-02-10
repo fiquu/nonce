@@ -1,0 +1,51 @@
+{
+  "name": "@fiquu/nonce",
+  "version": "0.0.0",
+  "description": "Simple CSP nonce generator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha -r ts-node/register test/**/*.spec.ts",
+    "postversion": "git push --follow-tags",
+    "build": "tsc && npm run docs",
+    "docs": "typedoc",
+    "prepack": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fiquu/nonce.git"
+  },
+  "keywords": [
+    "nonce",
+    "csp",
+    "content",
+    "security",
+    "policy",
+    "base64"
+  ],
+  "author": "fiquu <hi@fiquu.dev> (https://github.com/fiquu)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fiquu/nonce/issues"
+  },
+  "homepage": "https://github.com/fiquu/nonce#readme",
+  "dependencies": {
+    "@types/node": "^13.7.0"
+  },
+  "devDependencies": {
+    "@fiquu/eslint-config": "^2.0.0",
+    "@types/chai": "^4.2.8",
+    "@types/faker": "^4.1.9",
+    "@types/mocha": "^7.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "faker": "^4.1.0",
+    "fi-is": "^4.0.0",
+    "mocha": "^7.0.1",
+    "nyc": "^15.0.0",
+    "ts-node": "^8.6.2",
+    "typedoc": "^0.16.9",
+    "typescript": "^3.7.5"
+  }
+}
