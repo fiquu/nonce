@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": "@fiquu"
+  "extends": "@fiquu/eslint-config/typescript"
 }
