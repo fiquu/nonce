@@ -1,5 +1,7 @@
 # Nonce
-Simple CSP nonce generator.
+
+Simple, dependency-free CSP nonce generator for Node.js.
 
 ## Documentation
-See: https://fiquu.github.io/nonce/
+
+Please see [the documentation page](https://fiquu.github.io/nonce/) for more information.
