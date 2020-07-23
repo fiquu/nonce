@@ -1,6 +1,6 @@
 import { random } from 'faker';
 import { expect } from 'chai';
-import is from 'fi-is';
+import is from '@fiquu/is';
 
 import nonce from '../../src';
 
