@@ -1,6 +1,6 @@
-import { random } from 'faker';
+import { isBase64 } from '@fiquu/is/lib/string';
 import { expect } from 'chai';
-import is from '@fiquu/is';
+import faker from 'faker';
 
 import nonce from '../../src';
 
@@ -30,8 +30,8 @@ describe('Nonce', function () {
     // Test random combinations
     argsets.push(...Array.from({ length: 6 }, () => {
       return [
-        random.number({ min: -9999, max: 9999 }),
-        random.boolean()
+        faker.datatype.number({ min: -9999, max: 9999 }),
+        faker.datatype.boolean()
       ];
     }));
 
@@ -40,7 +40,7 @@ describe('Nonce', function () {
         const _nonce = nonce(...args);
 
         expect(_nonce).to.be.a('string');
-        expect(is.base64(_nonce)).to.be.true;
+        expect(isBase64(_nonce)).to.be.true;
         expect(nonces).to.not.include(_nonce);
         // 16 byte (128-bit) strings in base64 are 24 chars long
         // 64 byte (512-bit) strings in base64 are 88 chars long
