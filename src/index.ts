@@ -10,9 +10,9 @@ import { randomBytes } from 'crypto';
  *
  * @returns {string} The base64 nonce value.
  */
-export default function nonce(size = 16): string {
+export default (size = 16): string => {
   const clamped = Math.max(16, Math.min(size, 64));
   const rounded = Math.round(clamped);
 
   return randomBytes(rounded).toString('base64');
-}
+};
